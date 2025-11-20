@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aitor Goyenechea | Data Analyst</title>
+    <style>
+        /* Basic Reset & Typography */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            color: #333;
+            background-color: #f4f7f6;
+        }
+        a { color: #007acc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            margin: 0;
+            color: #2c3e50;
+            font-size: 2.5em;
+        }
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .contact-info {
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        /* Sections */
+        section { margin-bottom: 40px; }
+        h2 {
+            color: #2c3e50;
+            border-left: 5px solid #007acc; /* Data Blue */
+            padding-left: 15px;
+            margin-top: 30px;
+        }
+        
+        /* Skills Tags */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skill-tag {
+            background: #e1ecf4;
+            color: #2c3e50;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        /* Experience Item */
+        .job {
+            margin-bottom: 20px;
+        }
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+        }
+        .job-title { font-weight: bold; font-size: 1.1em; color: #2c3e50; }
+        .company { font-style: italic; color: #555; }
+        .date { color: #7f8c8d; font-size: 0.9em; }
+        ul { margin-top: 5px; padding-left: 20px; }
+        li { margin-bottom: 5px; }
+
+        /* Button */
+        .btn {
+            display: inline-block;
+            background: #007acc;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        .btn:hover { background: #005fa3; text-decoration: none; }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .container { padding: 20px; margin: 0; }
+            .job-header { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Aitor Goyenechea</h1>
+        <div class="subtitle">Data Analyst | Market Research | Strategic Reporting</div>
+        <div class="contact-info">
+            <p>Toronto, Ontario | aitorgoyare@gmail.com</p>
+            <p>
+                <a href="https://www.linkedin.com/in/aitorgoyenechea" target="_blank">LinkedIn</a> | 
+                <a href="https://github.com/Aitorgoyare" target="_blank">GitHub</a>
+            </p>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I am a seasoned Data Analyst with over 10 years of experience specializing in market research, data analytics, and strategic reporting. 
+            My expertise lies in harnessing qualitative and quantitative research methods to extract actionable insights from complex datasets.
+            Proficient in <strong>SQL, Power BI, and Tableau</strong>, I help businesses make informed, data-driven decisions.
+        </p>
+        <a href="mailto:aitorgoyare@gmail.com" class="btn">Contact Me</a>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Microsoft Power BI</span>
+            <span class="skill-tag">Tableau</span>
+            <span class="skill-tag">R Programming</span>
+            <span class="skill-tag">Marketing Analytics</span>
+            <span class="skill-tag">Salesforce CRM</span>
+            <span class="skill-tag">Microsoft Azure Fundamentals</span>
+            <span class="skill-tag">Database Management</span>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Professional Experience</h2>
+
+        <div class="job">
+            <div class="job-header">
+                <div><span class="job-title">Market Research Analyst</span> | <span class="company">isgSearch</span></div>
+                <span class="date">Feb 2022 – Present</span>
+            </div>
+            <ul>
+                <li>Design and maintain interactive Power BI dashboards and SQL databases to monitor critical KPIs like sales pipeline health and conversion rates.</li>
+                <li>Conduct comprehensive market research to evaluate customer demographics and service potential, translating complex data into clear recommendations.</li>
+                <li>Collaborate with cross-functional teams to develop reports using CRM and relational databases, optimizing revenue forecasting.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div><span class="job-title">Global Marketing Analyst</span> | <span class="company">ITN Logistics</span></div>
+                <span class="date">Nov 2018 – Jan 2022</span>
+            </div>
+            <ul>
+                <li>Leveraged R, SQL, Power BI, and Tableau to track product line sales and costs, analyzing complex datasets to monitor expenses.</li>
+                <li>Drove business growth by using data storytelling techniques to communicate insights derived from SQL analysis to stakeholders.</li>
+                <li>Developed marketing strategies by assembling and analyzing detailed sales forecasts and market trends.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div><span class="job-title">Marketing Coordinator</span> | <span class="company">Virelec Ltd</span></div>
+                <span class="date">Jan 2018 – Aug 2018</span>
+            </div>
+            <ul>
+                <li>Formulated marketing strategies by analyzing market data using Power BI and social media analytics.</li>
+                <li>Created and managed a lead database within the company CRM, ensuring accurate data entry and follow-up.</li>
+            </ul>
+        </div>
+        
+        <div class="job">
+            <div class="job-header">
+                <div><span class="job-title">Database Administrator</span> | <span class="company">Language Connections LTD</span></div>
+                <span class="date">Jan 2010 – Dec 2011</span>
+            </div>
+            <ul>
+                <li>Played a pivotal role in global expansion by implementing Salesforce CRM at new international locations.</li>
+                <li>Designed and supported a database housing over 50,000 entries, performing maintenance and server hardening.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="job">
+            <div class="job-header">
+                <div><span class="job-title">Data Analytics Boot Camp</span> | <span class="company">University of Toronto SCS</span></div>
+                <span class="date">2021</span>
+            </div>
+            <p>Focus: Real-world data analysis skills including API interactions, SQL, R, and advanced data visualization techniques.</p>
+        </div>
+        <div class="job">
+            <div class="job-header">
+                <div><span class="job-title">Diploma, International Business</span> | <span class="company">Seneca College</span></div>
+                <span class="date">2011 – 2013</span>
+            </div>
+        </div>
+        <div class="job">
+            <div class="job-header">
+                <div><span class="job-title">Bachelor's Degree, Accounting</span> | <span class="company">Universidad Catolica Andres Bello</span></div>
+                <span class="date">2003 – 2009</span>
+            </div>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>
