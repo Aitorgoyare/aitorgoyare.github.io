@@ -5,116 +5,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aitor Goyenechea | Data Analyst</title>
     <style>
-        /* Basic Reset & Typography */
+        /* Dark Mode Reset & Typography */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             margin: 0;
-            color: #333;
-            /* We remove the background color here because WebGL will handle it */
-            overflow-x: hidden; /* Prevents scrollbar flickering */
+            color: #e0e0e0; /* Light text for dark mode */
+            overflow-x: hidden;
+            background-color: #000; /* Fallback color */
         }
-        a { color: #007acc; text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        a { color: #4db8ff; text-decoration: none; transition: color 0.3s; } /* Neon Blue links */
+        a:hover { color: #ffffff; text-decoration: underline; }
 
-        /* Container - Glassmorphism Style */
+        /* Glassmorphism Container - Dark Version */
         .container {
             max-width: 900px;
             margin: 0 auto;
-            /* Slightly transparent white background */
-            background: rgba(255, 255, 255, 0.94); 
-            /* The Blur Effect (Glassmorphism) */
-            backdrop-filter: blur(10px); 
-            -webkit-backdrop-filter: blur(10px);
+            /* Dark semi-transparent background */
+            background: rgba(20, 20, 20, 0.75); 
+            /* Blur Effect */
+            backdrop-filter: blur(15px); 
+            -webkit-backdrop-filter: blur(15px);
             padding: 40px;
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
             margin-top: 40px;
             margin-bottom: 40px;
-            border-radius: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.08); /* Subtle border */
             position: relative;
-            z-index: 10; /* Ensures content sits on top of the animation */
+            z-index: 10;
         }
 
         /* Header */
         header {
             text-align: center;
-            border-bottom: 2px solid #eee;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             padding-bottom: 20px;
             margin-bottom: 30px;
         }
         h1 {
             margin: 0;
-            color: #2c3e50;
+            color: #ffffff;
             font-size: 2.5em;
+            letter-spacing: 1px;
         }
         .subtitle {
-            color: #7f8c8d;
+            color: #b0b0b0;
             font-size: 1.2em;
             margin-bottom: 10px;
         }
         .contact-info {
             font-size: 0.9em;
-            color: #555;
+            color: #888;
         }
 
         /* Sections */
         section { margin-bottom: 40px; }
         h2 {
-            color: #2c3e50;
-            border-left: 5px solid #007acc; /* Data Blue */
+            color: #ffffff;
+            border-left: 4px solid #4db8ff; /* Neon Blue Accent */
             padding-left: 15px;
             margin-top: 30px;
         }
         
-        /* Skills Tags */
+        /* Skills Tags - Dark Pill Style */
         .skills-grid {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
         }
         .skill-tag {
-            background: #e1ecf4;
-            color: #2c3e50;
-            padding: 5px 10px;
+            background: rgba(77, 184, 255, 0.15); /* Low opacity blue */
+            color: #4db8ff;
+            border: 1px solid rgba(77, 184, 255, 0.3);
+            padding: 6px 12px;
             border-radius: 4px;
             font-size: 0.9em;
-            font-weight: bold;
-            transition: transform 0.2s;
+            font-weight: 600;
+            transition: all 0.3s ease;
         }
         .skill-tag:hover {
-            transform: translateY(-2px);
-            background: #d4e6f1;
+            transform: translateY(-3px);
+            background: #4db8ff;
+            color: #000;
+            box-shadow: 0 0 15px rgba(77, 184, 255, 0.6);
         }
 
         /* Experience Item */
         .job {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
+        .job:last-child { border-bottom: none; }
+        
         .job-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
             flex-wrap: wrap;
         }
-        .job-title { font-weight: bold; font-size: 1.1em; color: #2c3e50; }
-        .company { font-style: italic; color: #555; }
-        .date { color: #7f8c8d; font-size: 0.9em; }
-        ul { margin-top: 5px; padding-left: 20px; }
-        li { margin-bottom: 5px; }
+        .job-title { font-weight: bold; font-size: 1.1em; color: #fff; }
+        .company { font-style: italic; color: #aaa; }
+        .date { color: #888; font-size: 0.9em; }
+        ul { margin-top: 10px; padding-left: 20px; color: #ccc; }
+        li { margin-bottom: 8px; }
 
         /* Button */
         .btn {
             display: inline-block;
-            background: #007acc;
-            color: white;
-            padding: 10px 20px;
+            background: transparent;
+            color: #4db8ff;
+            padding: 10px 25px;
             border-radius: 5px;
             text-decoration: none;
-            margin-top: 10px;
-            transition: background 0.3s;
+            margin-top: 15px;
+            border: 1px solid #4db8ff;
+            transition: all 0.3s;
+            font-weight: bold;
         }
-        .btn:hover { background: #005fa3; text-decoration: none; }
+        .btn:hover { 
+            background: #4db8ff; 
+            color: #000; 
+            box-shadow: 0 0 20px rgba(77, 184, 255, 0.4);
+            text-decoration: none; 
+        }
 
         /* Responsive */
         @media (max-width: 600px) {
@@ -298,22 +313,22 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
 <script>
-    VANTA.NET({
+    VANTA.FOG({
       el: "#vanta-bg",
       mouseControls: true,
       touchControls: true,
       gyroControls: false,
       minHeight: 200.00,
       minWidth: 200.00,
-      scale: 1.00,
-      scaleMobile: 1.00,
-      color: 0x007acc,      /* Matches your blue links */
-      backgroundColor: 0xf4f7f6, /* Matches your original bg */
-      points: 12.00,
-      maxDistance: 23.00,
-      spacing: 18.00
+      highlightColor: 0x4db8ff, /* Neon Blue Highlight */
+      midtoneColor: 0x1a1a1a,   /* Dark Grey Smoke */
+      lowlightColor: 0x000000,  /* Pure Black Deep */
+      baseColor: 0x000000,      /* Black Base */
+      blurFactor: 0.6,
+      speed: 1.2,
+      zoom: 1.2
     })
 </script>
 
